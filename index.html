@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ЮРЦЕНТР | Юридическая помощь в Абакане</title>
+    <meta name="description" content="Юридическая помощь в Абакане. Бесплатная консультация: 8-902-014-94-07">
+    <style>
+        body { font-family: 'Times New Roman', serif; margin: 0; padding: 0; color: #333; }
+        .header { background: #1a237e; color: white; padding: 30px; text-align: center; }
+        .header h1 { margin: 0; font-size: 28px; }
+        .header p { margin: 10px 0 0; font-size: 18px; opacity: 0.9; }
+        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
+        .phone { font-size: 24px; color: #1a237e; text-align: center; margin: 20px 0; }
+        .articles { display: grid; gap: 20px; }
+        .article-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
+        .article-card h3 { margin: 0 0 10px; color: #1a237e; }
+        .article-card a { color: #1a237e; text-decoration: none; }
+        .article-card a:hover { text-decoration: underline; }
+        .footer { text-align: center; padding: 20px; color: #666; font-size: 14px; }
+        .footer a { color: #1a237e; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>ЮРЦЕНТР</h1>
+        <p>Ваша проблема — наше решение</p>
+    </div>
+    <div class="container">
+        <div class="phone">
+            Бесплатная консультация: <a href="tel:89020149407" style="color:#1a237e;text-decoration:none;">8-902-014-94-07</a>
+        </div>
+        <p style="text-align:center;font-size:18px;">
+            г. Абакан, ул. Крылова, 17а к2 | Пн-Пт 09:00-16:00
+        </p>
+        <hr>
+        <h2>Статьи</h2>
+        <div class="articles" id="articles-list">
+            <p>Загрузка...</p>
+        </div>
+    </div>
+    <div class="footer">
+        <p>ЮРЦЕНТР | <a href="https://urtsentr19.ru">urtsentr19.ru</a> | <a href="https://vk.com/urtsentr">ВКонтакте</a></p>
+        <p>Материалы носят информационный характер и не являются юридической консультацией</p>
+    </div>
+    <script>
+        fetch('articles/list.json').then(r=>r.json()).then(articles=>{
+            const list = document.getElementById('articles-list');
+            list.innerHTML = articles.map(a =>
+                '<div class="article-card">' +
+                '<h3><a href="articles/' + a.file + '">' + a.title + '</a></h3>' +
+                '<p>' + a.desc + '</p>' +
+                '<small>' + a.date + '</small>' +
+                '</div>'
+            ).join('');
+        });
+    </script>
+</body>
+</html>
