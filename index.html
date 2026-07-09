@@ -34,7 +34,12 @@
             г. Абакан, ул. Крылова, 17а к2 | Пн-Пт 09:00-16:00
         </p>
         <hr>
-        <h2>Статьи</h2>
+        <h2>📰 Новости</h2>
+        <div class="articles" id="posts-list">
+            <p>Загрузка...</p>
+        </div>
+        <hr>
+        <h2>📖 Статьи</h2>
         <div class="articles" id="articles-list">
             <p>Загрузка...</p>
         </div>
@@ -44,6 +49,19 @@
         <p>Материалы носят информационный характер и не являются юридической консультацией</p>
     </div>
     <script>
+        fetch('posts/list.json').then(r=>r.json()).then(posts=>{
+            const list = document.getElementById('posts-list');
+            if (posts.length) {
+                list.innerHTML = posts.map(p =>
+                    '<div class="article-card">' +
+                    '<h3><a href="posts/' + p.file + '">' + p.title + '</a></h3>' +
+                    '<small>' + p.date + '</small>' +
+                    '</div>'
+                ).join('');
+            } else { list.innerHTML = '<p>Новости скоро появятся</p>'; }
+        }).catch(()=>{
+            document.getElementById('posts-list').innerHTML = '<p>Новости скоро появятся</p>';
+        });
         fetch('articles/list.json').then(r=>r.json()).then(articles=>{
             const list = document.getElementById('articles-list');
             list.innerHTML = articles.map(a =>
