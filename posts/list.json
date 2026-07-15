@@ -1,5 +1,11 @@
 [
   {
+    "title": "Уволили за прогул? Это незаконно!",
+    "file": "post_92.html",
+    "date": "15.07.2026",
+    "image": "images/img_9d2f971a.jpg"
+  },
+  {
     "title": "Затопили соседи? Пошаговый план",
     "file": "post_89.html",
     "date": "15.07.2026",
@@ -471,5 +477,17 @@
     "file": "post_88.html",
     "date": "15.07.2026",
     "image": "images/img_66e4e60d.jpg"
+  },
+  {
+    "title": "Реальный случай: Автоюрист (ОСАГО, КАСКО)",
+    "file": "post_90.html",
+    "date": "15.07.2026",
+    "image": "images/img_90a18583.jpg"
+  },
+  {
+    "title": "История: Семейные споры",
+    "file": "post_91.html",
+    "date": "15.07.2026",
+    "image": "images/img_6a16bb8b.jpg"
   }
 ]
