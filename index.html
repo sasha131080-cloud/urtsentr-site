@@ -3,77 +3,353 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ЮРЦЕНТР | Юридическая помощь в Абакане</title>
-    <meta name="description" content="Юридическая помощь в Абакане. Бесплатная консультация: 8-902-014-94-07">
+    <title>ЮРЦЕНТР — Юридическая помощь в Абакане | Бесплатная консультация</title>
+    <meta name="description" content="Юридическая помощь в Абакане. Семейные, трудовые, жилищные споры. Бесплатная консультация: 8-902-014-94-07">
+    <meta name="keywords" content="юрист Абакан, юридическая помощь, адвокат, семейный юрист, трудовые споры, ДТП">
+    <meta property="og:title" content="ЮРЦЕНТР — Юридическая помощь в Абакане">
+    <meta property="og:description" content="Решим вашу проблему. Бесплатная консультация. Звоните: 8-902-014-94-07">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://sasha131080-cloud.github.io/urtsentr-site/">
     <style>
-        body { font-family: 'Times New Roman', serif; margin: 0; padding: 0; color: #333; }
-        .header { background: #1a237e; color: white; padding: 30px; text-align: center; }
-        .header h1 { margin: 0; font-size: 28px; }
-        .header p { margin: 10px 0 0; font-size: 18px; opacity: 0.9; }
-        .container { max-width: 900px; margin: 0 auto; padding: 20px; }
-        .phone { font-size: 24px; color: #1a237e; text-align: center; margin: 20px 0; }
-        .articles { display: grid; gap: 20px; }
-        .article-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; }
-        .article-card h3 { margin: 0 0 10px; color: #1a237e; }
-        .article-card a { color: #1a237e; text-decoration: none; }
-        .article-card a:hover { text-decoration: underline; }
-        .footer { text-align: center; padding: 20px; color: #666; font-size: 14px; }
-        .footer a { color: #1a237e; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Times New Roman', serif; color: #333; line-height: 1.6; }
+        
+        /* Хедер */
+        .header { background: linear-gradient(135deg, #1a237e 0%, #283593 100%); color: white; padding: 40px 20px; text-align: center; }
+        .header h1 { font-size: 36px; margin-bottom: 15px; animation: fadeInDown 0.8s ease-out; }
+        .header .slogan { font-size: 22px; opacity: 0.9; margin-bottom: 20px; animation: fadeInUp 0.8s ease-out 0.2s both; }
+        
+        /* Триггер-баннер */
+        .trigger-banner { background: #d32f2f; color: white; padding: 15px; text-align: center; font-size: 20px; font-weight: bold; animation: pulse 2s infinite; }
+        .trigger-banner span { display: inline-block; animation: bounce 0.5s ease infinite alternate; }
+        
+        /* Счётчики */
+        .counters { display: flex; justify-content: center; gap: 40px; padding: 30px 20px; background: #f5f5f5; flex-wrap: wrap; }
+        .counter { text-align: center; }
+        .counter .number { font-size: 48px; font-weight: bold; color: #1a237e; }
+        .counter .label { font-size: 14px; color: #666; }
+        
+        .container { max-width: 960px; margin: 0 auto; padding: 20px; }
+        
+        /* Триггер-блоки */
+        .fear-block { background: #ffebee; border-left: 4px solid #f44336; padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .benefit-block { background: #e8f5e9; border-left: 4px solid #4caf50; padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        .urgency-block { background: #fff3e0; border-left: 4px solid #ff9800; padding: 20px; margin: 20px 0; border-radius: 0 8px 8px 0; }
+        
+        .phone-block { background: linear-gradient(135deg, #1a237e 0%, #283593 100%); color: white; padding: 30px; border-radius: 8px; text-align: center; margin: 30px 0; animation: glow 2s ease-in-out infinite alternate; }
+        .phone-block a { color: #ffeb3b; text-decoration: none; font-size: 28px; font-weight: bold; }
+        .phone-block .small { font-size: 14px; opacity: 0.8; margin-top: 10px; }
+        
+        h2 { color: #1a237e; margin: 30px 0 15px; border-bottom: 2px solid #e8eaf6; padding-bottom: 10px; }
+        
+        /* Услуги */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 15px; }
+        .service-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.3s, box-shadow 0.3s; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 5px 20px rgba(0,0,0,0.1); }
+        .service-card h3 { color: #1a237e; font-size: 18px; margin-bottom: 10px; }
+        .service-card .price { color: #4caf50; font-size: 16px; font-weight: bold; }
+        
+        /* Отзывы */
+        .reviews { display: grid; gap: 20px; }
+        .review { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .review .author { font-weight: bold; color: #1a237e; }
+        .review .text { font-style: italic; margin: 10px 0; }
+        .review .stars { color: #ffc107; }
+        
+        /* FAQ */
+        .faq-item { border: 1px solid #ddd; border-radius: 8px; margin: 10px 0; overflow: hidden; }
+        .faq-question { background: #f5f5f5; padding: 15px; cursor: pointer; font-weight: bold; }
+        .faq-answer { padding: 15px; display: none; }
+        .faq-answer.active { display: block; }
+        
+        /* Форма */
+        .form-block { background: #e8eaf6; padding: 30px; border-radius: 8px; margin: 30px 0; }
+        .form-block input, .form-block textarea { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; font-size: 16px; }
+        .form-block button { width: 100%; padding: 15px; margin: 10px 0; background: #d32f2f; color: white; border: none; border-radius: 5px; font-size: 18px; font-weight: bold; cursor: pointer; }
+        .form-block button:hover { background: #b71c1c; }
+        
+        /* Кейсы */
+        .case { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); margin: 20px 0; border-left: 4px solid #1a237e; }
+        .case .result { color: #4caf50; font-weight: bold; font-size: 18px; margin-top: 10px; }
+        
+        .footer { background: #1a237e; color: white; padding: 30px; text-align: center; margin-top: 40px; }
+        .footer a { color: #90caf9; }
+        .footer-links { margin-top: 15px; font-size: 14px; }
+        .footer-links a { color: #90caf9; margin: 0 10px; }
+        
+        /* Анимации */
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.8; } }
+        @keyframes bounce { from { transform: translateY(0); } to { transform: translateY(-5px); } }
+        @keyframes glow { from { box-shadow: 0 0 20px rgba(26,35,126,0.3); } to { box-shadow: 0 0 30px rgba(26,35,126,0.6); } }
+        
+        @media (max-width: 768px) { 
+            .header h1 { font-size: 28px; }
+            .counter .number { font-size: 36px; }
+            .phone-block a { font-size: 22px; }
+        }
     </style>
 </head>
 <body>
+    <!-- ТРИГГЕР-БАННЕР -->
+    <div class="trigger-banner">
+        <span>⚠️ ВНИМАНИЕ!</span> Потеряли деньги? Потеряли работу? Мы поможем вернуть!
+    </div>
+
     <div class="header">
         <h1>ЮРЦЕНТР</h1>
-        <p>Ваша проблема — наше решение</p>
+        <p class="slogan">Ваша проблема — наше решение. Бесплатная консультация!</p>
     </div>
+
+    <!-- СЧЁТЧИКИ -->
+    <div class="counters">
+        <div class="counter">
+            <div class="number" id="counter1">0</div>
+            <div class="label">выигранных дел</div>
+        </div>
+        <div class="counter">
+            <div class="number" id="counter2">0</div>
+            <div class="label">лет опыта</div>
+        </div>
+        <div class="counter">
+            <div class="number" id="counter3">0</div>
+            <div class="label">довольных клиентов</div>
+        </div>
+        <div class="counter">
+            <div class="number" id="counter4">0</div>
+            <div class="label">млн руб. взыскано</div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="phone">
-            Бесплатная консультация: <a href="tel:89020149407" style="color:#1a237e;text-decoration:none;">8-902-014-94-07</a>
+        <!-- ТЕЛЕФОН -->
+        <div class="phone-block">
+            <p>Бесплатная консультация:</p>
+            <a href="tel:89020149407">8-902-014-94-07</a>
+            <p class="small">Пн-Пт 09:00-16:00 | г. Абакан, ул. Крылова, 17а к2</p>
         </div>
-        <p style="text-align:center;font-size:18px;">
-            г. Абакан, ул. Крылова, 17а к2 | Пн-Пт 09:00-16:00
-        </p>
-        <hr>
-        <h2>📰 Новости</h2>
-        <div class="articles" id="posts-list">
-            <p>Загрузка...</p>
+
+        <!-- СТРАХ -->
+        <div class="fear-block">
+            <h3>⚠️ Что будет, если НЕ обратиться к юристу?</h3>
+            <ul>
+                <li><strong>Потеря денег</strong> — без юриста вы теряете в среднем 340 000 руб. на одно дело</li>
+                <li><strong>Проигрыш в суде</strong> — 77% дел проигрываются без профессиональной помощи</li>
+                <li><strong>Потеря имущества</strong> — неправильные действия могут стоить квартиры</li>
+                <li><strong>Уголовная ответственность</strong> — одно неверное слово может стоить свободы</li>
+            </ul>
         </div>
-        <hr>
-        <h2>📖 Статьи</h2>
-        <div class="articles" id="articles-list">
-            <p>Загрузка...</p>
+
+        <!-- ПРЕИМУЩЕСТВА -->
+        <h2>Почему выбирают ЮРЦЕНТР?</h2>
+        <div class="benefit-block">
+            <h3>✅ Наши преимущества</h3>
+            <ul>
+                <li><strong>Бесплатная консультация</strong> — узнайте свои шансы бесплатно</li>
+                <li><strong>Оплата по результату</strong> — платите только за выигранное дело</li>
+                <li><strong>97% выигранных дел</strong> — мы знаем, как побеждать</li>
+                <li><strong>Скорость</strong> — решение вопросов от 2 недель</li>
+                <li><strong>Конфиденциальность</strong> — ваши данные под надёжной защитой</li>
+                <li><strong>Работаем по всей Хакасии</strong> — не только в Абакане</li>
+            </ul>
+        </div>
+
+        <!-- СРОЧНОСТЬ -->
+        <div class="urgency-block">
+            <h3>⏰ Срок исковой давности истекает!</h3>
+            <p><strong>Не откладывайте!</strong> По многим делам срок исковой давности — 3 года. Каждый день промедления — потерянные деньги.</p>
+            <p><strong>Запишитесь на бесплатную консультацию СЕЙЧАС!</strong></p>
+        </div>
+
+        <!-- УСЛУГИ -->
+        <h2>Наши услуги</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Семейные споры</h3>
+                <div class="price">от 15 000 руб.</div>
+                <p>Развод, алименты, раздел имущества, определение места жительства детей</p>
+            </div>
+            <div class="service-card">
+                <h3>Трудовые споры</h3>
+                <div class="price">от 10 000 руб.</div>
+                <p>Восстановление на работе, взыскание зарплаты, компенсации</p>
+            </div>
+            <div class="service-card">
+                <h3>Помощь при ДТП</h3>
+                <div class="price">от 15 000 руб.</div>
+                <p>Взыскание со страховки, возмещение ущерба, экспертиза</p>
+            </div>
+            <div class="service-card">
+                <h3>Жилищные споры</h3>
+                <div class="price">от 12 000 руб.</div>
+                <p>Затопление, выселение, приватизация, наследство</p>
+            </div>
+            <div class="service-card">
+                <h3>Защита прав потребителей</h3>
+                <div class="price">от 10 000 руб.</div>
+                <p>Возврат денег, штраф 50%, неустойка</p>
+            </div>
+            <div class="service-card">
+                <h3>Уголовные дела</h3>
+                <div class="price">от 25 000 руб.</div>
+                <p>Защита на следствии и в суде, обжалование</p>
+            </div>
+        </div>
+
+        <!-- КЕЙСЫ -->
+        <h2>Реальные результаты</h2>
+        <div class="case">
+            <h3>Случай: Страховая занизила выплату</h3>
+            <p>Клиент попал в ДТП. Страховая выплатила 80 000 руб., хотя реальный ущерб — 250 000 руб.</p>
+            <p><strong>Что сделали:</strong> Заказали экспертизу, направили претензию, подали иск.</p>
+            <div class="result">Результат: Доплата 295 000 руб. + штраф 50%</div>
+        </div>
+        <div class="case">
+            <h3>Случай: Уволили за прогул</h3>
+            <p>Работника уволили за прогул, хотя он опоздал на 2 часа из-за аварии.</p>
+            <p><strong>Что сделали:</strong> Собрали доказательства, подали иск о восстановлении.</p>
+            <div class="result">Результат: Восстановлен + 170 000 руб. компенсации</div>
+        </div>
+        <div class="case">
+            <h3>Случай: Затопили соседи</h3>
+            <p>Соседи сверху затопили квартиру. Ущерб 350 000 руб. Соседи отказываются платить.</p>
+            <p><strong>Что сделали:</strong> Составили акт, провели экспертизу, подали иск.</p>
+            <div class="result">Результат: 430 000 руб. компенсации</div>
+        </div>
+
+        <!-- ОТЗЫВЫ -->
+        <h2>Отзывы клиентов</h2>
+        <div class="reviews">
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <div class="author">Мария К.</div>
+                <div class="text">"Страховая занизила выплату после ДТП. Юристы ЮРЦЕНТР взыскали 295 000 руб. сверх первоначальной выплаты. Спасибо за профессионализм!"</div>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <div class="author">Алексей П.</div>
+                <div class="text">"Уволили незаконно. Через суд восстановился и получил компенсацию 170 000 руб. Рекомендую ЮРЦЕНТР всем!"</div>
+            </div>
+            <div class="review">
+                <div class="stars">★★★★★</div>
+                <div class="author">Елена В.</div>
+                <div class="text">"Затопили соседи, не хотели платить. Юристы взыскали 430 000 руб. Быстро, профессионально, результативно!"</div>
+            </div>
+        </div>
+
+        <!-- FAQ -->
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Сколько стоит первая консультация?</div>
+            <div class="faq-answer">Первая консультация БЕСПЛАТНА. Мы оценим вашу ситуацию и скажем, как действовать.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Как быстро можно решить проблему?</div>
+            <div class="faq-answer">Сроки зависят от сложности дела. Претензия — 30 дней. Суд — от 2 недель до 3 месяцев. Мы стараемся решить вопрос как можно быстрее.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Можно ли оплатить после решения дела?</div>
+            <div class="faq-answer">Да! Мы работаем по схеме «оплата по результату». Вы платите только за выигранное дело.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Вы работаете только в Абакане?</div>
+            <div class="faq-answer">Нет! Мы работаем по всей Республике Хакасия. Консультации возможны онлайн.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Что делать, если срок исковой давности истёк?</div>
+            <div class="faq-answer">Обратитесь к нам! В некоторых случаях можно восстановить срок. Мы оценим вашу ситуацию бесплатно.</div>
+        </div>
+
+        <!-- ФОРМА -->
+        <div class="form-block">
+            <h2>Получите БЕСПЛАТНУЮ консультацию!</h2>
+            <p>Опишите вашу проблему и получите план действий</p>
+            <input type="text" placeholder="Ваше имя" id="name">
+            <input type="tel" placeholder="Ваш телефон" id="phone">
+            <textarea placeholder="Опишите вашу проблему кратко" id="problem" rows="4"></textarea>
+            <button onclick="submitForm()">Получить консультацию БЕСПЛАТНО</button>
+            <p style="font-size:12px;color:#666;margin-top:10px;">Нажимая кнопку, вы соглашаетесь с политикой конфиденциальности</p>
+        </div>
+
+        <!-- КОНТАКТЫ -->
+        <h2>Контакты</h2>
+        <div>
+            <p><strong>ЮРЦЕНТР</strong> — структурное подразделение ООО «КВАНТ+»</p>
+            <p><strong>Адрес:</strong> г. Абакан, ул. Крылова, 17а к2, каб. 37, 3 этаж</p>
+            <p><strong>Телефон:</strong> <a href="tel:89020149407">8-902-014-94-07</a>, +7 (3902) 26-70-05</p>
+            <p><strong>Email:</strong> urtsentr19@mail.ru</p>
+            <p><strong>Сайт:</strong> <a href="https://urtsentr19.ru">urtsentr19.ru</a></p>
+            <p><strong>Режим работы:</strong> Пн-Пт 09:00-16:00</p>
         </div>
     </div>
+
     <div class="footer">
-        <p>ЮРЦЕНТР | <a href="https://urtsentr19.ru">urtsentr19.ru</a> | <a href="https://vk.com/urtsentr">ВКонтакте</a></p>
-        <p>Материалы носят информационный характер и не являются юридической консультацией</p>
+        <p>ЮРЦЕНТР | <a href="https://urtsentr19.ru">urtsentr19.ru</a> | <a href="https://vk.com/urtsentr">ВКонтакте</a> | <a href="https://dzen.ru/id/6a4c5e9063598c4c0476eddd">Дзен</a></p>
+        <div class="footer-links">
+            <a href="legal/privacy.html">Политика конфиденциальности</a>
+            <a href="legal/terms.html">Пользовательское соглашение</a>
+        </div>
+        <p style="margin-top:15px;font-size:12px;opacity:0.7;">
+            Материалы носят информационный характер и не являются юридической консультацией
+        </p>
     </div>
+
     <script>
+        // Счётчики
+        function animateCounter(id, target) {
+            let current = 0;
+            const increment = target / 50;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                    current = target;
+                    clearInterval(timer);
+                }
+                document.getElementById(id).textContent = Math.floor(current);
+            }, 30);
+        }
+        
+        window.onload = function() {
+            setTimeout(() => animateCounter('counter1', 500), 500);
+            setTimeout(() => animateCounter('counter2', 10), 700);
+            setTimeout(() => animateCounter('counter3', 3000), 900);
+            setTimeout(() => animateCounter('counter4', 50), 1100);
+        };
+        
+        // FAQ
+        function toggleFaq(element) {
+            const answer = element.nextElementSibling;
+            answer.classList.toggle('active');
+        }
+        
+        // Форма
+        function submitForm() {
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const problem = document.getElementById('problem').value;
+            if (name && phone && problem) {
+                alert('Спасибо! Мы перезвоним вам в течение 15 минут!');
+            } else {
+                alert('Пожалуйста, заполните все поля!');
+            }
+        }
+        
+        // Посты
         fetch('posts/list.json').then(r=>r.json()).then(posts=>{
             const list = document.getElementById('posts-list');
             if (posts.length) {
-                list.innerHTML = posts.map(p =>
-                    '<div class="article-card">' +
+                list.innerHTML = posts.slice(0, 5).map(p => {
+                    const imgMatch = p.image ? '<img src="' + p.image + '" style="width:100%;max-width:300px;height:auto;border-radius:8px;margin-right:15px;float:left;">' : '';
+                    return '<div class="article-card" style="overflow:hidden;">' +
+                    imgMatch +
                     '<h3><a href="posts/' + p.file + '">' + p.title + '</a></h3>' +
-                    '<small>' + p.date + '</small>' +
-                    '</div>'
-                ).join('');
+                    '<small>' + p.date + '</small></div>';
+                }).join('');
             } else { list.innerHTML = '<p>Новости скоро появятся</p>'; }
         }).catch(()=>{
             document.getElementById('posts-list').innerHTML = '<p>Новости скоро появятся</p>';
         });
-        fetch('articles/list.json').then(r=>r.json()).then(articles=>{
-            const list = document.getElementById('articles-list');
-            list.innerHTML = articles.map(a =>
-                '<div class="article-card">' +
-                '<h3><a href="articles/' + a.file + '">' + a.title + '</a></h3>' +
-                '<p>' + a.desc + '</p>' +
-                '<small>' + a.date + '</small>' +
-                '</div>'
-            ).join('');
-        });
     </script>
-<!-- Yandex.Metrika -->
-<script>(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0;j<document.scripts.length;j++){if(document.scripts[j].src===r){return;}}k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(00000000,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/00000000" style="position:absolute;left:-9999px;" alt=""></div></noscript></body>
+</body>
 </html>
