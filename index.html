@@ -33,6 +33,10 @@
     <script type="text/javascript">(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};m[i].l=1*new Date();for(var j=0,jf=l.length;j<jf;j++)if(s.test(e[j])){k=e[j],a=t.createElement(r),a.async=1,a.src=m[i].l+(kf?jf+1:j)+'.js';e.parentNode.insertBefore(a,e[j])}})(window,document,"script","https://mc.yandex.ru/metrika/tag.js","ym");ym(97537864,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});</script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#dc2626">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Inter', sans-serif; color: #1a1a2e; line-height: 1.6; background: #f8fafc; overflow-x: hidden; }
@@ -319,6 +323,17 @@
         <a href="tel:89020149407" class="cta-phone">8-902-014-94-07</a>
     </section>
 
+    <!-- Подписка -->
+    <section style="background:linear-gradient(135deg,#7f1d1d,#dc2626);color:white;padding:80px 40px;text-align:center;">
+        <h2 style="font-size:36px;font-weight:800;margin-bottom:15px;">Подпишитесь на новости</h2>
+        <p style="font-size:18px;opacity:0.9;margin-bottom:30px;">Получайте полезные юридические советы и новости</p>
+        <div style="max-width:500px;margin:0 auto;display:flex;gap:10px;">
+            <input type="email" id="sub-email" placeholder="Ваш email" style="flex:1;padding:15px;border:none;border-radius:50px;font-size:16px;">
+            <button onclick="subscribe()" style="background:#ff9800;color:white;padding:15px 30px;border:none;border-radius:50px;font-weight:600;cursor:pointer;">Подписаться</button>
+        </div>
+        <p id="sub-result" style="margin-top:15px;font-size:14px;"></p>
+    </section>
+
     <section id="contacts">
         <div class="section-title">
             <h2>Контакты</h2>
@@ -382,6 +397,27 @@
     </footer>
     
     <script>
+        // Регистрация Service Worker для PWA
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW registered'))
+                .catch(err => console.log('SW error:', err));
+        }
+        
+        // Подписка
+        function subscribe() {
+            const email = document.getElementById('sub-email').value;
+            if (email && email.includes('@')) {
+                let subs = JSON.parse(localStorage.getItem('urtsentr_subs') || '[]');
+                subs.push({email: email, date: new Date().toISOString()});
+                localStorage.setItem('urtsentr_subs', JSON.stringify(subs));
+                document.getElementById('sub-result').textContent = 'Спасибо за подписку!';
+                document.getElementById('sub-email').value = '';
+            } else {
+                document.getElementById('sub-result').textContent = 'Введите корректный email';
+            }
+        }
+        
         fetch('posts/list.json').then(r=>r.json()).then(posts=>{
             const list = document.getElementById('posts-list');
             if (posts.length) {
