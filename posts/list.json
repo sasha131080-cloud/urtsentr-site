@@ -1,5 +1,11 @@
 [
   {
+    "title": "Уволили за прогул? Это незаконно!",
+    "file": "post_116.html",
+    "date": "16.07.2026",
+    "image": "images/img_a3559033.jpg"
+  },
+  {
     "title": "ДТП на летней трассе: чек-лист действий",
     "file": "post_113.html",
     "date": "16.07.2026",
@@ -615,5 +621,17 @@
     "file": "post_112.html",
     "date": "16.07.2026",
     "image": "images/img_d391ba55.jpg"
+  },
+  {
+    "title": "Как решить проблему с заливом?",
+    "file": "post_114.html",
+    "date": "16.07.2026",
+    "image": "images/img_9d64e49c.jpg"
+  },
+  {
+    "title": "Как решить проблему с возвратом товара?",
+    "file": "post_115.html",
+    "date": "16.07.2026",
+    "image": "images/img_9d64e49c.jpg"
   }
 ]
