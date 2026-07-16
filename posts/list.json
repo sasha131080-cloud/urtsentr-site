@@ -1,6 +1,12 @@
 [
   {
     "title": "Страховая занизила выплату? Требуйте доплату",
+    "file": "post_104.html",
+    "date": "16.07.2026",
+    "image": "images/img_32c2e5c6.jpg"
+  },
+  {
+    "title": "Страховая занизила выплату? Требуйте доплату",
     "file": "post_101.html",
     "date": "16.07.2026",
     "image": "images/img_32c2e5c6.jpg"
@@ -543,5 +549,17 @@
     "file": "post_100.html",
     "date": "16.07.2026",
     "image": "images/img_4a4da336.jpg"
+  },
+  {
+    "title": "Реальный случай: ДТП",
+    "file": "post_102.html",
+    "date": "16.07.2026",
+    "image": "images/img_ed05dcbe.jpg"
+  },
+  {
+    "title": "Как решить проблему с возвратом товара?",
+    "file": "post_103.html",
+    "date": "16.07.2026",
+    "image": "images/img_483cfb67.jpg"
   }
 ]
