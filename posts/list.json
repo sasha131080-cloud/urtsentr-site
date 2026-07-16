@@ -1,5 +1,11 @@
 [
   {
+    "title": "Страховая занизила выплату? Требуйте доплату",
+    "file": "post_101.html",
+    "date": "16.07.2026",
+    "image": "images/img_32c2e5c6.jpg"
+  },
+  {
     "title": "Уволили за прогул? Это незаконно!",
     "file": "post_97.html",
     "date": "16.07.2026",
@@ -519,5 +525,23 @@
     "file": "post_91.html",
     "date": "15.07.2026",
     "image": "images/img_6a16bb8b.jpg"
+  },
+  {
+    "title": "История: возвратом товара",
+    "file": "post_98.html",
+    "date": "16.07.2026",
+    "image": "images/img_9d64e49c.jpg"
+  },
+  {
+    "title": "Реальный случай: трудовым спором",
+    "file": "post_99.html",
+    "date": "16.07.2026",
+    "image": "images/img_cd671618.jpg"
+  },
+  {
+    "title": "Реальный случай: семейным спором",
+    "file": "post_100.html",
+    "date": "16.07.2026",
+    "image": "images/img_4a4da336.jpg"
   }
 ]
