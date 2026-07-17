@@ -1,6 +1,12 @@
 [
   {
     "title": "ДТП на летней трассе: чек-лист действий",
+    "file": "post_137.html",
+    "date": "17.07.2026",
+    "image": "images/img_36de23c1.jpg"
+  },
+  {
+    "title": "ДТП на летней трассе: чек-лист действий",
     "file": "post_134.html",
     "date": "17.07.2026",
     "image": "images/img_6d11c9e6.jpg"
@@ -741,5 +747,17 @@
     "file": "post_133.html",
     "date": "17.07.2026",
     "image": "images/img_11749f01.jpg"
+  },
+  {
+    "title": "Реальный случай: ДТП",
+    "file": "post_135.html",
+    "date": "17.07.2026",
+    "image": "images/img_d6ac49e2.jpg"
+  },
+  {
+    "title": "История: возвратом товара",
+    "file": "post_136.html",
+    "date": "17.07.2026",
+    "image": "images/img_f5a395ef.jpg"
   }
 ]
