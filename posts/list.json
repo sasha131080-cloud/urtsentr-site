@@ -1,6 +1,12 @@
 [
   {
     "title": "Затопили соседи? Пошаговый план",
+    "file": "post_143.html",
+    "date": "18.07.2026",
+    "image": "images/img_f76a41af.jpg"
+  },
+  {
+    "title": "Затопили соседи? Пошаговый план",
     "file": "post_140.html",
     "date": "18.07.2026",
     "image": "images/img_65ab987a.jpg"
@@ -777,5 +783,17 @@
     "file": "post_139.html",
     "date": "18.07.2026",
     "image": "images/img_4a4da336.jpg"
+  },
+  {
+    "title": "Как решить проблему с ДТП?",
+    "file": "post_141.html",
+    "date": "18.07.2026",
+    "image": "images/img_401bf818.jpg"
+  },
+  {
+    "title": "Как решить проблему с возвратом товара?",
+    "file": "post_142.html",
+    "date": "18.07.2026",
+    "image": "images/img_11749f01.jpg"
   }
 ]
