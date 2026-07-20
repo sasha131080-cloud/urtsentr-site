@@ -1,6 +1,12 @@
 [
   {
     "title": "Уволили за прогул? Это незаконно!",
+    "file": "post_191.html",
+    "date": "20.07.2026",
+    "image": "images/img_3ca590dd.jpg"
+  },
+  {
+    "title": "Уволили за прогул? Это незаконно!",
     "file": "post_187.html",
     "date": "20.07.2026",
     "image": "images/img_3ca590dd.jpg"
@@ -1059,5 +1065,23 @@
     "file": "post_186.html",
     "date": "20.07.2026",
     "image": "images/img_847aa49b.jpg"
+  },
+  {
+    "title": "История: возвратом товара",
+    "file": "post_188.html",
+    "date": "20.07.2026",
+    "image": "images/img_c5c35185.jpg"
+  },
+  {
+    "title": "Реальный случай: возвратом товара",
+    "file": "post_189.html",
+    "date": "20.07.2026",
+    "image": "images/img_931d946c.jpg"
+  },
+  {
+    "title": "Реальный случай: возвратом товара",
+    "file": "post_190.html",
+    "date": "20.07.2026",
+    "image": "images/img_e7591ef8.jpg"
   }
 ]
