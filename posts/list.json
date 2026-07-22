@@ -1,5 +1,11 @@
 [
   {
+    "title": "Затопили соседи? Пошаговый план",
+    "file": "post_224.html",
+    "date": "22.07.2026",
+    "image": "images/img_19e25449.jpg"
+  },
+  {
     "title": "ДТП на летней трассе: чек-лист действий",
     "file": "post_221.html",
     "date": "21.07.2026",
@@ -1259,5 +1265,17 @@
     "file": "post_220.html",
     "date": "21.07.2026",
     "image": "images/img_cede878d.jpg"
+  },
+  {
+    "title": "Реальный случай: заливом",
+    "file": "post_222.html",
+    "date": "22.07.2026",
+    "image": "images/img_cede878d.jpg"
+  },
+  {
+    "title": "ДТП: что делать?",
+    "file": "post_223.html",
+    "date": "22.07.2026",
+    "image": "images/img_ac10f9bf.jpg"
   }
 ]
