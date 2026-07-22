@@ -1,6 +1,12 @@
 [
   {
     "title": "Затопили соседи? Пошаговый план",
+    "file": "post_229.html",
+    "date": "22.07.2026",
+    "image": "images/img_19e25449.jpg"
+  },
+  {
+    "title": "Затопили соседи? Пошаговый план",
     "file": "post_224.html",
     "date": "22.07.2026",
     "image": "images/img_19e25449.jpg"
@@ -1277,5 +1283,29 @@
     "file": "post_223.html",
     "date": "22.07.2026",
     "image": "images/img_ac10f9bf.jpg"
+  },
+  {
+    "title": "Реальный случай: семейным спором",
+    "file": "post_225.html",
+    "date": "22.07.2026",
+    "image": "images/img_cede878d.jpg"
+  },
+  {
+    "title": "семейным спором: что делать?",
+    "file": "post_226.html",
+    "date": "22.07.2026",
+    "image": "images/img_df2d2910.jpg"
+  },
+  {
+    "title": "Как решить проблему с семейным спором?",
+    "file": "post_227.html",
+    "date": "22.07.2026",
+    "image": "images/img_cd686512.jpg"
+  },
+  {
+    "title": "Реальный случай: возвратом товара",
+    "file": "post_228.html",
+    "date": "22.07.2026",
+    "image": "images/img_6b2a9e3f.jpg"
   }
 ]
