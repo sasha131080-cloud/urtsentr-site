@@ -1,6 +1,12 @@
 [
   {
     "title": "Страховая занизила выплату? Требуйте доплату",
+    "file": "post_298.html",
+    "date": "26.07.2026",
+    "image": "images/img_1a1cdfd0.jpg"
+  },
+  {
+    "title": "Страховая занизила выплату? Требуйте доплату",
     "file": "post_295.html",
     "date": "26.07.2026",
     "image": "images/img_1a1cdfd0.jpg"
@@ -1701,5 +1707,17 @@
     "file": "post_292.html",
     "date": "25.07.2026",
     "image": "images/img_4ac4cac0.jpg"
+  },
+  {
+    "title": "История: трудовым спором",
+    "file": "post_296.html",
+    "date": "26.07.2026",
+    "image": "images/img_4ac4cac0.jpg"
+  },
+  {
+    "title": "ДТП: что делать?",
+    "file": "post_297.html",
+    "date": "26.07.2026",
+    "image": "images/img_b82d898b.jpg"
   }
 ]
