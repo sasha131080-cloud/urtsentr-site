@@ -1,5 +1,11 @@
 [
   {
+    "title": "Затопили соседи? Пошаговый план",
+    "file": "post_320.html",
+    "date": "27.07.2026",
+    "image": "images/img_5045994d.jpg"
+  },
+  {
     "title": "Уволили за прогул? Это незаконно!",
     "file": "post_317.html",
     "date": "27.07.2026",
@@ -1832,5 +1838,17 @@
     "file": "post_316.html",
     "date": "27.07.2026",
     "image": "images/img_742ba146.jpg"
+  },
+  {
+    "title": "Как решить проблему с семейным спором?",
+    "file": "post_318.html",
+    "date": "27.07.2026",
+    "image": "images/img_ffc6cf89.jpg"
+  },
+  {
+    "title": "Как решить проблему с заливом?",
+    "file": "post_319.html",
+    "date": "27.07.2026",
+    "image": "images/img_815ec3b6.jpg"
   }
 ]
