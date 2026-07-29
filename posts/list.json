@@ -1,5 +1,11 @@
 [
   {
+    "title": "Уволили за прогул? Это незаконно!",
+    "file": "post_360.html",
+    "date": "29.07.2026",
+    "image": "images/img_d9b87c55.jpg"
+  },
+  {
     "title": "Отпуск на работе не дают? Ваши права по закону",
     "file": "post_357.html",
     "date": "29.07.2026",
@@ -2072,5 +2078,17 @@
     "file": "post_356.html",
     "date": "29.07.2026",
     "image": "images/img_13d5422f.jpg"
+  },
+  {
+    "title": "Юрист vs самозащита: что выгоднее? — история",
+    "file": "post_358.html",
+    "date": "29.07.2026",
+    "image": "images/img_c0822fcc.jpg"
+  },
+  {
+    "title": "Честный ответ: стоит ли обращаться к юристу?",
+    "file": "post_359.html",
+    "date": "29.07.2026",
+    "image": "images/img_5e7d5883.jpg"
   }
 ]
